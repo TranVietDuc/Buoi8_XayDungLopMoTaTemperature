@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(tempInC){
+        this.tempInC = tempInC;
+        this.convertCtoF = function(){
+            return tempInC*1.8 + 32;
+        };
+        this.convertCtoK=function()
+        {
+            return tempInC+ 273;
+        }
+
+    }
+    var temp = parseFloat(prompt("Insert Temperature in C: "));
+    var TempRightNow = new Temperature(temp);
+    alert('In F: ' + TempRightNow.convertCtoF() +  ', In K: ' + TempRightNow.convertCtoK());
+</script>
+</body>
+</html>
